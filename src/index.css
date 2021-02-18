@@ -1,16 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
 }
 
 .App {
-  width: 70%;
-  margin: auto;
-  margin-top: 30px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.login,
+.register {
+  width: 450px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.login h2,
+.register h2 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+
+.form-group {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 32px;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 0;
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+  position: absolute;
+  top: 0px;
+  left: 7px;
+  background: #fff;
+  color: #ff731f;
+  font-weight: bolder;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%;
+  padding: 5px 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 18px;
+  background: #ff731f;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.forgot {
+  font-weight: bolder;
+}
+
+.eye {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.lbtn {
+  color: #ff731f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.verification {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.verification h2 {
+  text-align: center;
+}
+
+.verify-btn {
+  width: 100%;
+  background: #ff731f;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form {
+  margin-bottom: 15px;
 }
